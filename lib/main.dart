@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'Pages/Acceuilpage.dart';
+import 'Provider/AdminPovider.dart';
+import 'configuration/configurationCouleur.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      ChangeNotifierProvider<AdminProvider>(
+          create: (context) => AdminProvider(),
+       child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,12 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Agro_Invest Admin',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        splashColor: MesCouleur().couleurPrincipal,
+        primarySwatch: Colors.green,
       ),
-      home: const Acceuilpage(),
+      debugShowCheckedModeBanner: false,
+      home:  Accueille(),
     );
   }
 }
