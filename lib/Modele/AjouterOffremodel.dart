@@ -12,7 +12,7 @@ class Offre {
   String? description;
   String? audioDescriptionPath;
   Agriculteur? agriculteur;
-  Investisseur? offreInvestisseur;
+  Investisseur? investisseur;
 
   Offre(
       {this.idOf,
@@ -23,7 +23,7 @@ class Offre {
         this.description,
         this.audioDescriptionPath,
         this.agriculteur,
-        this.offreInvestisseur,
+        this.investisseur,
       });
   Offre copyWith({
     int? idOf,
@@ -34,7 +34,7 @@ class Offre {
     String? description,
     String? audioDescriptionPath,
     Agriculteur? agriculteur,
-    Investisseur? offreInvestisseur,
+    Investisseur? investisseur,
   }) {
     return Offre(
       idOf: idOf?? this.idOf,
@@ -45,7 +45,7 @@ class Offre {
       description: description ?? this.description,
       audioDescriptionPath: audioDescriptionPath ?? this.audioDescriptionPath,
       agriculteur: agriculteur ?? this.agriculteur,
-      offreInvestisseur: offreInvestisseur ?? this.offreInvestisseur,
+      investisseur: investisseur ?? this.investisseur,
     );
   }
 
@@ -59,7 +59,7 @@ class Offre {
       'description': description,
       'audioDescriptionPath': audioDescriptionPath,
       'agriculteur': agriculteur?.toJson(),
-      'offreInvestisseur': offreInvestisseur?.toJson(),
+      'offreInvestisseur': investisseur?.toJson(),
     };
   }
 
@@ -73,7 +73,7 @@ class Offre {
       description: map['description'] != null ? map['description'] as String : null,
       audioDescriptionPath: map['audioDescriptionPath'] != null ? map['audioDescriptionPath'] as String : null,
       agriculteur: map['agriculteur'] != null ? Agriculteur.fromMap(map['agriculteur'] as Map<String,dynamic>) : null,
-      offreInvestisseur: map['offreInvestisseur'] != null ? Investisseur.fromJson(map['offreInvestisseur'] as Map<String,dynamic>) : null,
+      investisseur: map['investisseur'] != null ? Investisseur.fromJson(map['investisseur'] as Map<String,dynamic>) : null,
     );
   }
 
@@ -85,7 +85,7 @@ class Offre {
 
   @override
   String toString() {
-    return 'Offre(idOf: $idOf, titre: $titre, montant: $montant, dateDebut: $dateDebut, duree: $durre, description: $description, audioDescriptionPath: $audioDescriptionPath, agriculteur: $agriculteur, offreInvestisseur: $offreInvestisseur)';
+    return 'Offre(idOf: $idOf, titre: $titre, montant: $montant, dateDebut: $dateDebut, duree: $durre, description: $description, audioDescriptionPath: $audioDescriptionPath, agriculteur: $agriculteur, offreInvestisseur: $investisseur)';
   }
 
   @override
@@ -101,7 +101,7 @@ class Offre {
           other.description == description &&
           other.audioDescriptionPath == audioDescriptionPath &&
           other.agriculteur == agriculteur &&
-          other.offreInvestisseur == offreInvestisseur;
+          other.investisseur == investisseur;
   }
 
   @override
@@ -114,6 +114,6 @@ class Offre {
     description.hashCode ^
     audioDescriptionPath.hashCode ^
     agriculteur.hashCode ^
-    offreInvestisseur.hashCode;
+    investisseur.hashCode;
   }
 }

@@ -1,10 +1,8 @@
-import 'package:dashboard_agroinvest/Pages/Dashboard.dart';
 import 'package:dashboard_agroinvest/Pages/logiAdmin.dart';
 import 'package:dashboard_agroinvest/Provider/AdminPovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../Pages/ProjetListesPage.dart';
 
 class Side_Menu extends StatefulWidget {
   const Side_Menu({Key? key}) : super(key: key);
@@ -14,8 +12,6 @@ class Side_Menu extends StatefulWidget {
 }
 
 class _Side_MenuState extends State<Side_Menu> {
-  final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -101,7 +97,6 @@ class _Side_MenuState extends State<Side_Menu> {
       // Navigation vers la page Paramettrage
         break;
       case 7: context.read<AdminProvider>().setCurrentIndex(pageId);
-      // Navigation vers la page Deconnexion;
         break;
       default:
         break;

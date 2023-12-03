@@ -8,7 +8,7 @@ class Investisseur {
   String? _passWord;
   String? _passWordConfirm;
 
-  investisseur(
+  Investisseur(
       {int? idInv,
         String? nomPrenom,
         String? email,

@@ -5,12 +5,10 @@ import 'package:http/http.dart' as http;
 
 class CreditServise{
 
-
-
   Future<List<Credit>>  CreditAffichertout() async {
-    print('Avant recuperation');
+    //print('Avant recuperation');
     final response = await http.get(Uri.parse("http://localhost:8080/Credit/affichertout"));
-    print('Apres recup : ${response.body}');
+    //print('Apres recup : ${response.body}');
 
     if (response.statusCode == 200) {
       // print("on est a 200" );
@@ -18,7 +16,6 @@ class CreditServise{
       List<Credit> credits = responseData
           .map((credit) => Credit.fromMap(credit))
           .toList();
-
       return credits;
     } else {
       throw Exception('Impossible de recuperer les offres');
