@@ -16,7 +16,7 @@ class _FormationsPageState extends State<FormationsPage> {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          HeaderDashboard(),
+         // HeaderDashboard(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

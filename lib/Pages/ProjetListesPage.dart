@@ -23,7 +23,7 @@ class _ProjetPageState extends State<ProjetPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderDashboard(),
+            //HeaderDashboard(),
             SizedBox(height: 40,),
             Text("Liste des Projets Agricoles", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
             SizedBox(height: 20,),

@@ -1,11 +1,9 @@
-import 'dart:js';
 
 import 'package:dashboard_agroinvest/Service/OffreService.dart';
 import 'package:flutter/material.dart';
 
 
 import '../Modele/AjouterOffremodel.dart';
-import '../Provider/AdminPovider.dart';
 import 'headerDashboard.dart';
 
 class OffreInvestisseurPage extends StatefulWidget {
@@ -25,7 +23,7 @@ class _OffreInvestisseurPageState extends State<OffreInvestisseurPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderDashboard(),
+           // HeaderDashboard(),
             SizedBox(height: 40,),
             Text("Liste des Offres Investisseur", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
             SizedBox(height: 20,),

@@ -8,7 +8,7 @@ class Offre {
   String? titre;
   String? montant;
   String? dateDebut;
-  int? durre;
+  String? durre;
   String? description;
   String? audioDescriptionPath;
   Agriculteur? agriculteur;
@@ -30,7 +30,7 @@ class Offre {
     String? titre,
     String? montant,
     String? dateDebut,
-    int? durre,
+    String? durre,
     String? description,
     String? audioDescriptionPath,
     Agriculteur? agriculteur,
@@ -69,7 +69,7 @@ class Offre {
       titre: map['titre'] != null ? map['titre'] as String : null,
       montant: map['montant'] != null ? map['montant'] as String : null,
       dateDebut: map['dateDebut'] != null ? map['dateDebut'] as String : null,
-      durre: map['durre'] != null ? map['durre'] as int : null,
+      durre: map['durre'] != null ? map['durre'] as String : null,
       description: map['description'] != null ? map['description'] as String : null,
       audioDescriptionPath: map['audioDescriptionPath'] != null ? map['audioDescriptionPath'] as String : null,
       agriculteur: map['agriculteur'] != null ? Agriculteur.fromMap(map['agriculteur'] as Map<String,dynamic>) : null,

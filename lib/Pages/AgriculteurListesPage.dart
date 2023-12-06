@@ -22,7 +22,7 @@ class _AgriculteurPageState extends State<AgriculteurPage> {
       body: SingleChildScrollView(
           child: Column(
             children: [
-              HeaderDashboard(),
+             // HeaderDashboard(),
               SizedBox(height: 40,),
               Text("Lites des Agriculteurs",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
               SizedBox(height: 20,),
@@ -54,7 +54,7 @@ class _AgriculteurPageState extends State<AgriculteurPage> {
                               DataCell(Text('${agriculteur.idAgr}',style: TextStyle(fontWeight: FontWeight.bold),)),
                               DataCell(CircleAvatar(
                                 backgroundImage: agriculteur.image!= null
-                                    ? NetworkImage("${agriculteur.image}") as ImageProvider<Object>?
+                                    ? NetworkImage("http://10.0.2.2/"+"${agriculteur.image}") as ImageProvider<Object>?
                                     : AssetImage("asset/images/user1.png") as ImageProvider<Object>?,
                                 radius: 20,
                               ),),
@@ -147,7 +147,7 @@ class _AgriculteurPageState1 extends State<AgriculteurPage> {
                       DataColumn(label: Text('Nom et Prénom', style: TextStyle(fontWeight: FontWeight.bold))),
                       DataColumn(label: Text('Email', style: TextStyle(fontWeight: FontWeight.bold))),
                       DataColumn(label: Text('Résidence', style: TextStyle(fontWeight: FontWeight.bold))),
-                      DataColumn(label: Text('Age', style: TextStyle(fontWeight: FontWeight.bold))),
+                      DataColumn(label: Text('Téléphone', style: TextStyle(fontWeight: FontWeight.bold))),
                       DataColumn(label: Text('Actions', style: TextStyle(fontWeight: FontWeight.bold))),
                     ],
                     source: _DataSource(context, agriculteurs),
@@ -200,8 +200,8 @@ class _DataSource extends DataTableSource {
         )),
         DataCell(Text('${agriculteur.nomPrenom}')),
         DataCell(Text('${agriculteur.email}')),
-        DataCell(Text('${agriculteur.telephone}')),
         DataCell(Text('${agriculteur.residense}')),
+        DataCell(Text('${agriculteur.telephone}')),
         DataCell(Column(
           children: [
             Row(

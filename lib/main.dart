@@ -1,3 +1,4 @@
+import 'package:dashboard_agroinvest/Pages/logiAdmin.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       debugShowCheckedModeBanner: false,
-      home:  Accueille(),
+      home:  LoginAdmin(),
     );
   }
 }

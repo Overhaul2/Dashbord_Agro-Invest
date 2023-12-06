@@ -1,9 +1,7 @@
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 
 import '../Modele/Investisseur.dart';
-import '../Provider/AdminPovider.dart';
 import '../Service/investisseurService.dart';
 import 'headerDashboard.dart';
 
@@ -24,7 +22,7 @@ class _InvestisseurListeState extends State<InvestisseurListe> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderDashboard(),
+          //  HeaderDashboard(),
             SizedBox(height: 40,),
             Text("Liste des Investisseurs",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
             SizedBox(height: 20,),
@@ -52,10 +50,10 @@ class _InvestisseurListeState extends State<InvestisseurListe> {
                       columns: const [
                         DataColumn(label: Text('ID',style: TextStyle(fontWeight: FontWeight.bold),)),
                         DataColumn(label: Text('Photo',style: TextStyle(fontWeight: FontWeight.bold),)),
-                        DataColumn(label: SizedBox(height: 60,child: Text('Nom et Prenom',style: TextStyle(fontWeight: FontWeight.bold)))),
-                        DataColumn(label: Text('Email',style: TextStyle(fontWeight: FontWeight.bold))),
+                        DataColumn(label: SizedBox(width:200,child: Text('Nom et Prenom',style: TextStyle(fontWeight: FontWeight.bold)))),
+                        DataColumn(label: SizedBox(width: 150,child: Text('Email',style: TextStyle(fontWeight: FontWeight.bold)))),
                         DataColumn(label: Text('Résidence',style: TextStyle(fontWeight: FontWeight.bold))),
-                        DataColumn(label: Text('Age',style: TextStyle(fontWeight: FontWeight.bold))),
+                        DataColumn(label: Text('Téléphone',style: TextStyle(fontWeight: FontWeight.bold))),
                         DataColumn(label: Text('Actions',style: TextStyle(fontWeight: FontWeight.bold))),
                       ],
                       source: _InvestisseurDataSource(investisseurs),
@@ -90,8 +88,8 @@ class _InvestisseurDataSource extends DataTableSource {
         ),),
         DataCell(Text('${investisseur.nomPrenom} '),),
         DataCell(Text('${investisseur.email}')),
-        DataCell(Text('${investisseur.telephone}')),
         DataCell(Text('${investisseur.residense}')),
+        DataCell(Text('${investisseur.telephone}')),
         DataCell(Column(
           children: [
             Row(
